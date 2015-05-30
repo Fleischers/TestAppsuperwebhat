@@ -1,0 +1,14 @@
+{
+  "name": "superwebhat",
+  "version": "0.0.1",
+  "description": "Basic chat test app with clients on browser and UE4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chat"
+  ],
+  "author": "Fleischer@gorlifsense.com",
+  "license": "ISC"
+}

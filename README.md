@@ -1,1 +1,1 @@
-Simple chat implementation with REST
+Simple chat implementation with REST architecture and Websockets?

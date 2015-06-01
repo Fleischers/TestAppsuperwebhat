@@ -9,6 +9,17 @@
   "keywords": [
     "chat"
   ],
-  "author": "Fleischer@gorlifsense.com",
-  "license": "ISC"
+  "author": "Glib Ischenko <Fleischer@gorlifsense.com> (http://fleischer.gorlifsense.com)",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "express": "~4.12.4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Fleischers/TestAppsuperwebhat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Fleischers/TestAppsuperwebhat/issues"
+  }
 }

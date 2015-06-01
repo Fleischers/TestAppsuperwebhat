@@ -2,10 +2,9 @@ var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 var http = require('http');
 var util = require('util');
-var querystring = require('querystring');
+// var querystring = require('querystring');
 var express = require ('express');
 
-// var events = require("events");
 var server = http.createServer();
 server.on('request', function (req,res) {
 
@@ -85,6 +84,7 @@ function Message (username, message, timestamp) {
 }
 // 172.16.63.255
 //}).listen(3000, 'localhost');
+
 
 var url = 'mongodb://localhost:27017/test';
 MongoClient.connect(url, function(err, db) {

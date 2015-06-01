@@ -3,10 +3,10 @@ var assert = require('assert');
 var http = require('http');
 var util = require('util');
 var querystring = require('querystring');
+var express = require ('express');
 
 // var events = require("events");
 var server = http.createServer();
-var messageArray = [];
 server.on('request', function (req,res) {
 
     res.writeHead(200, { 'Content-Type': 'application/json' });

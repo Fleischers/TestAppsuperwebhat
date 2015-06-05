@@ -3,22 +3,28 @@ var http = require ('http');
 var util = require('util');
 var app = express();
 
-var messageArray = [];
+app.set('port', (process.env.PORT || 3000));
 
-app.get('/', function (req, res) {
-    res.setHeader('Access-Control-Allow-Credentials', '*');
+var messageArray = ["Hello"];
+
+app.all('/', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+ });
+
+app.get('/', function(req, res, next) {
     res.json(messageArray);
 });
 
-app.post('/', function (req, res) {
-    res.setHeader('Access-Control-Allow-Credentials', '*');
+app.post('/', function(req, res, next) {
     res.json(util.inspect(req.body) + " " +  util.inspect(req.headers) + " " +  req.ip + " " +  util.inspect(req.params));
     messageArray.push(new Message("user", req.body, new Date(), req.ip));
 });
 
-var server = http.createServer(app);
-server.listen(3000, '172.16.63.255');
-
+app.listen(app.get('port'), function() {
+  console.log("Node app is running on port:" + app.get('port'))
+})
 
 function Message (username, message, timestamp, ip) {
     this.username = username;

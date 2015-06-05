@@ -1,6 +1,6 @@
 {
   "name": "superwebhat",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Basic chat test app with clients on browser and UE4",
   "main": "app.js",
   "scripts": {

@@ -7,7 +7,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.set('port', (process.env.PORT || 3000));
 
 var messageArray = ["Hello"];
-var messageArray.message = "message";
 
 app.all('/', function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");

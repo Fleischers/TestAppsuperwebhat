@@ -9,7 +9,7 @@ try {
   var host = yaml.safeLoad(fs.readFileSync('./host.yml', 'utf8'));
   console.log(host.ip);
 } catch (e) {
-  console.log(e);
+  console.error(e);
 }
 
 
@@ -37,8 +37,6 @@ server.on('request', function (req,res) {
 
             */
     }
-
-
 
 
     req.on('data', function(data) {
